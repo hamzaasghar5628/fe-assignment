@@ -1,0 +1,8 @@
+{
+  "port": 9000,
+  "watch": true,
+  "routes": {
+    "/products*": "/products"
+  },
+  "middlewares": "./json-server-middlewares.js"
+} 

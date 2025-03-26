@@ -47,4 +47,4 @@ Implement a custom cart solution that showcases the current state of the cart
   - The Cart should be persistent and the products should remain in the Cart upon page reload
 
 ### Querying the mock database
-  Product list can be retrieved from http://localhost:5000/products, in order to be able to provide pagination, the following params can be used: `_page` and `_limit`, for example `http://localhost:5000/products?_page=1&_limit=10`
+  Product list can be retrieved from http://localhost:9000/products, in order to be able to provide pagination, the following params can be used: `_page` and `_limit`, for example `http://localhost:9000/products?_page=1&_limit=10`

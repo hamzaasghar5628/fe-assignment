@@ -22,7 +22,7 @@ class ProductService {
             const response = await fetch(
                 `http://localhost:9000/products?_page=${this.currentPage}&_limit=${this.itemsPerPage}`
             );
-            
+
             const products = await response.json();
             const totalCount = 30; // Total products in db.json
             

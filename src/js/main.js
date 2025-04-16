@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             productService.loadMoreProducts();
         });
         
-        // Ensure button is visible initially
-        loadMoreBtn.style.display = 'block';
+        // Hide load more button initially
+        loadMoreBtn.style.display = 'none';
     }
 
     document.getElementById('cartButton').addEventListener('click', () => {
@@ -58,4 +58,23 @@ document.addEventListener('DOMContentLoaded', () => {
             cart.updateQuantity(productId, newQuantity);
         }
     });
+
+    // Show spinner before fetching products
+    document.getElementById('spinner').style.display = 'block';
+
+    productService.loadInitialProducts()
+        .then(() => {
+            // Hide spinner and show load more button after products are loaded
+            document.getElementById('spinner').style.display = 'none';
+            if (loadMoreBtn) {
+                loadMoreBtn.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            // Hide spinner if there's an error
+            document.getElementById('spinner').style.display = 'none';
+            console.error('Error:', error);
+            // Assuming showNotification is a method of productService
+            productService.showNotification('Failed to load products', 'error');
+        });
 });

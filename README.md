@@ -1,5 +1,5 @@
 # Frontend Assignment
-
+@habibly
 Build the application described below, by cloning this repo and following the wireframes provided in `/wireframes`. Share a link to your repo when completed.
 
 ### Installation
@@ -16,15 +16,15 @@ npm run dev
 ```
 
 ## Assignment
-
+@habibly
 Build out the navigation, products and cart features.
-
+@habibly
 #### Notes
   - Follow the wireframes closely
   - Comment your code as much as possible
   - Do not use third party libraries, everything should be covered with browser standard methods
   - Use semantic HTML
-
+@habibly
 #### Navigation
 
 Open cart should open the Cart Modal
